@@ -1,4 +1,4 @@
-##### Developing a shopify custom theme
+### Developing a shopify custom theme
 
 - Took Debut theme as an initial theme and for getting the structure
 - Implementing **React** and **GraphQL**
