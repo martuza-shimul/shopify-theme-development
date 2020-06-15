@@ -74,7 +74,8 @@
           {%- assign enable_thumbnail_slides = true -%}
         {% endif %}
 
-         {% comment %} <div class="thumbnails-wrapper{% if enable_thumbnail_slides == true %} thumbnails-slider--active{% endif %}">
+
+        {% comment %} <div class="thumbnails-wrapper{% if enable_thumbnail_slides == true %} thumbnails-slider--active{% endif %}">
           {% if enable_thumbnail_slides == true %}
             <button type="button" class="btn btn--link medium-up--hide thumbnails-slider__btn thumbnails-slider__prev thumbnails-slider__prev--{{ section.id }}">
               {% include 'icon-chevron-left' %}
@@ -120,7 +121,7 @@
               <span class="icon__fallback-text">{{ 'sections.slideshow.next_slide' | t }}</span>
             </button>
           {% endif %}
-        </div>  {% endcomment %}
+        </div>   {% endcomment %}
       {% endif %}
     </div>
 

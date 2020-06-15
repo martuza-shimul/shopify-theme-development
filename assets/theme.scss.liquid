@@ -3815,7 +3815,8 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   }
 
   &.active-thumb {
-    border-color: $color-text;
+    {% comment %} border-color: $color-text; {% endcomment %}
+    border-color:none;
   }
 }
 
@@ -3894,6 +3895,8 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 }
 .product-slider {
   position:relative;
+  background: #d4d4d4;
+    padding-left: 0;
   .prev,.next{
     position:absolute;
     top:45%;
@@ -3904,7 +3907,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
     cursor:pointer;
   }
   .prev{
-    left:10px;
+    left:-20px;
     clip-path: polygon(50% 0%, 50% 100%, 0% 50%);
   }
   .next{

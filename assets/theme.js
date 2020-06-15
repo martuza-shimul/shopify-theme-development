@@ -7588,28 +7588,37 @@ for (let i = 0; i < slideEls.length; i++) {
 			slideEls[i].classList.add("hide");
 			slideEls[i].nextElementSibling.classList.remove("hide");
 		}
-	}, i * 3000 + 2000);
+	}, i * 3000 + 5000);
 }
 
-// for (let j = 0; j < 4; j++) {
-// 	var totalSecond = 0;
-// 	setTimeout(() => {
-// 		for (let i = 0; i < slideEls.length; i++) {
-// 			// document.querySelector(".product-single__media-wrapper").nextElementSibling
-// 			// 	.classList.length;
+// collection page video thumbnails
 
-// 			setTimeout(function () {
-// 				if (
-// 					slideEls[i].nextElementSibling.className.includes(
-// 						"product-single__media-wrapper"
-// 					)
-// 				) {
-// 					slideEls[i].classList.add("hide");
-// 					slideEls[i].nextElementSibling.classList.remove("hide");
-// 				}
-// 			}, i * 3000 + 2000);
-// 			totalSecond = slideEls.length * 3000 + 2000;
-// 		}
-// 		console.log(j, totalSecond);
-// 	}, j * 20000);
-// }
+// var collectionThumb = document.querySelectorAll(".card-holder-wrapper");
+// document
+// 	.querySelector(".card-holder.video-bg")
+// 	.parentElement.classList.add("has-video");
+
+// document
+// 	.querySelectorAll(".card-holder .product-single__media--video")
+// 	.forEach(value => value.parentElement.classList.add("TODO-class"));
+
+// document
+// 	.querySelector(".card-holder .product-single__media--video")
+// 	.parentElement.parentElement.classList.add("TODO-class");
+
+var colThumb = document.querySelectorAll(
+	".card-holder .product-single__media--video"
+);
+
+colThumb.forEach(value => {
+	value.parentElement.classList.add("video-bg");
+	value.parentElement.parentElement.classList.add("has-video");
+});
+
+var videoSiblings = document.querySelectorAll(
+	".card-holder-wrapper.has-video .card-holder:not(.video-bg)"
+);
+
+videoSiblings.forEach(value => value.classList.add("hide"));
+
+document.querySelectorAll('.card-holder-wrapper.has-video').forEach(value => value.style.paddingTop=0)

@@ -59,11 +59,11 @@
       </div>
     {% when 'external_video' %}
       <div class="product-single__media" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%;">
-        {{ media | external_video_tag  }}
+        {{ media | external_video_tag: image_size: image_size, autoplay:true, muted:true  }}
       </div>
     {% when 'video' %}
       <div class="product-single__media product-single__media--video product-single__media--{{ media.id }}" style="padding-top: {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%;">
-        {{ media | video_tag: class: 'media-video', image_size: image_size }}
+        {{ media | video_tag: class: 'media-video', image_size: image_size, autoplay:true, muted:true }}
       </div>
     {% when 'model' %}
       <div class="product-single__media" style="padding-top: 100%">
