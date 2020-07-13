@@ -134,6 +134,11 @@
 		
 		{% section 'header' %}
 
+		{%- if template contains 'page' or template contains 'collection' -%}
+    	{% section 'full-width-banner' %}
+    {% endif %}
+		
+
 		<div class="page-container drawer-page-content" id="PageContainer">
 			<main
 				class="main-content js-focus-hidden"
